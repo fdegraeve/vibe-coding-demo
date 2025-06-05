@@ -142,18 +142,40 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🚀 Deployment
 
-### Building for Production
+### GitHub Pages (Automated)
+The repository includes GitHub Actions workflows for automatic deployment:
+
+1. **Main Workflow** (`ci.yml`) - Uses modern GitHub Pages Actions
+2. **Legacy Workflow** (`deploy-legacy.yml`) - Alternative deployment method
+
+**Setup:**
+1. Go to Repository Settings → Pages
+2. Source: Select "GitHub Actions"
+3. Push to `main` branch triggers deployment
+
+**Troubleshooting:** See [GITHUB_PAGES_TROUBLESHOOTING.md](GITHUB_PAGES_TROUBLESHOOTING.md)
+
+### Manual Deployment
+```bash
+# Quick deploy to GitHub Pages
+npm run deploy
+
+# Or step by step
+npm run build
+npx gh-pages -d dist
+```
+
+### Other Platforms
 ```bash
 npm run build
 ```
+Deploy the `dist/` directory to:
+- **Netlify** - Drag & drop or Git integration
+- **Vercel** - Import GitHub repository
+- **Firebase Hosting** - `firebase deploy`
+- **Surge.sh** - `surge dist/`
 
-The built files will be in the `dist/` directory and can be deployed to any static hosting service.
-
-### Recommended Hosting Platforms
-- **Netlify** - Auto-deploy from Git
-- **Vercel** - Optimized for frontend frameworks
-- **GitHub Pages** - Free hosting for public repositories
-- **Firebase Hosting** - Google's hosting platform
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ## 📞 Support
 

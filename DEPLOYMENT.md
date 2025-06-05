@@ -2,7 +2,7 @@
 
 This document provides instructions for deploying the GitHub Repository Viewer application.
 
-## Build for Production
+## 🚀 Quick Deploy
 
 ```bash
 npm run build
@@ -10,7 +10,61 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
-## Deployment Options
+## 🔧 GitHub Pages Deployment
+
+### Method 1: GitHub Actions (Recommended)
+
+The repository includes automated deployment via GitHub Actions. To set it up:
+
+#### 1. Configure Repository Settings
+1. Go to your GitHub repository settings
+2. Navigate to **Pages** section
+3. Under **Source**, select **GitHub Actions**
+4. The workflow will automatically deploy on pushes to `main` branch
+
+#### 2. Permissions Setup
+The workflow requires specific permissions. If you encounter permission errors:
+
+1. Go to **Settings** → **Actions** → **General**
+2. Under **Workflow permissions**, select:
+   - ✅ **Read and write permissions**
+   - ✅ **Allow GitHub Actions to create and approve pull requests**
+
+#### 3. Troubleshooting Permission Errors
+
+If you see this error:
+```
+remote: Permission to username/repository.git denied to github-actions[bot]
+fatal: unable to access 'https://github.com/username/repository.git/': The requested URL returned error: 403
+```
+
+**Solution A: Use newer GitHub Pages Actions**
+The main workflow (`ci.yml`) uses the newer GitHub Pages deployment method that doesn't require special permissions.
+
+**Solution B: Enable workflow permissions**
+1. Repository Settings → Actions → General
+2. Workflow permissions → "Read and write permissions"
+3. Save settings
+
+**Solution C: Use Personal Access Token** (if needed)
+1. Create a Personal Access Token with `repo` scope
+2. Add it as `DEPLOY_TOKEN` in repository secrets
+3. Update workflow to use `deploy_key: ${{ secrets.DEPLOY_TOKEN }}`
+
+### Method 2: Manual Deployment
+
+```bash
+# Build the application
+npm run build
+
+# Install gh-pages if not already installed
+npm install -g gh-pages
+
+# Deploy to gh-pages branch
+gh-pages -d dist
+```
+
+## 🌐 Other Deployment Options
 
 ### 1. Netlify
 
