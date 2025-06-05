@@ -1,0 +1,67 @@
+/* Styles personnalisés pour l'application GitHub Repository Viewer */
+
+/* Reset minimal pour éviter les conflits avec Vuetify */
+:root {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Réinitialisation du body pour Vuetify */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Container principal */
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Styles pour les graphiques */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* Styles pour les cartes de dépôts */
+.repository-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.repository-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Styles pour les statistiques */
+.stats-card {
+  text-align: center;
+}
+
+/* Styles pour les programmes de formation */
+.training-program-card {
+  transition: all 0.3s ease;
+}
+
+.training-program-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Assurer que Vuetify a la priorité */
+.v-application {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Styles pour le sélecteur de langue */
+.language-toggle {
+  min-width: auto !important;
+}
+
+/* Styles responsifs */
+@media (max-width: 600px) {
+  .chart-container {
+    height: 250px;
+  }
+}
