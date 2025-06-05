@@ -15,8 +15,7 @@
         :title="currentLocale === 'fr' ? 'Switch to English' : 'Passer au français'"
         class="mr-2"
       >
-        <v-icon>{{ currentLocale === 'fr' ? 'mdi-translate' : 'mdi-translate' }}</v-icon>
-        <span class="ml-1 text-caption">{{ currentLocale.toUpperCase() }}</span>
+        <span style="font-size: 1.2em;">{{ currentLocale === 'fr' ? '🇫🇷' : '🇺🇸' }}</span>
       </v-btn>
 
       <v-btn

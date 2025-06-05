@@ -75,8 +75,11 @@ export default {
     subtitle: 'Basé sur l\'analyse de {count} dépôts de {user}',
     description: 'Voici un programme de formation personnalisé pour devenir contributeur efficace sur les projets utilisant les technologies identifiées.',
     detectedTech: 'Technologies Détectées',
+    sortedByUsage: 'Triées par nombre d\'apparitions dans vos projets',
     project: 'projet',
     projects: 'projets',
+    rank: 'Rang',
+    mostUsed: 'Plus utilisée',
     duration: 'Durée estimée',
     modules: 'Modules',
     resources: 'Ressources recommandées',
@@ -157,6 +160,30 @@ export default {
           'Testing avec JUnit/Mockito',
           'Architecture microservices',
           'Contribution aux projets Apache'
+        ]
+      },
+      react: {
+        title: 'Spécialiste React/Next.js',
+        description: 'Maîtrisez React, ses hooks, l\'écosystème et Next.js pour le développement moderne.',
+        modules: [
+          'React 18+ et nouvelles fonctionnalités',
+          'Hooks avancés et custom hooks',
+          'State management (Redux/Zustand)',
+          'React Router et navigation',
+          'Testing avec Jest et React Testing Library',
+          'Next.js et SSR/SSG'
+        ]
+      },
+      php: {
+        title: 'Développeur Web PHP',
+        description: 'Développez des applications web robustes avec PHP moderne, Laravel et Symfony.',
+        modules: [
+          'PHP 8+ et nouvelles fonctionnalités',
+          'Programmation orientée objet avancée',
+          'Laravel et Symfony frameworks',
+          'API REST et GraphQL',
+          'Testing avec PHPUnit',
+          'Sécurité et best practices'
         ]
       },
       general: {
