@@ -22,9 +22,9 @@ fatal: unable to access 'https://github.com/username/repository.git/': The reque
 
 #### Solution B: Use GitHub Pages Actions Method
 The main workflow (`ci.yml`) uses the modern GitHub Pages deployment method:
-- Uses `actions/configure-pages@v3`
-- Uses `actions/upload-pages-artifact@v2`
-- Uses `actions/deploy-pages@v2`
+- Uses `actions/configure-pages@v4`
+- Uses `actions/upload-pages-artifact@v3`
+- Uses `actions/deploy-pages@v4`
 
 This method doesn't require pushing to `gh-pages` branch and has better permission handling.
 
